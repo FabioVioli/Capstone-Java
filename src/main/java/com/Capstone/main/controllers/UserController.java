@@ -16,12 +16,13 @@ import com.Capstone.main.entities.DM;
 import com.Capstone.main.entities.LFP;
 import com.Capstone.main.repositories.DMRepository;
 import com.Capstone.main.repositories.LFPRepository;
+import com.Capstone.main.services.UserService;
 
 @RestController
 @RequestMapping("/user")
 @CrossOrigin("http://localhost:4200")
 public class UserController {
-	
+	@Autowired UserService userServ;
 	@Autowired UserRepository userRepo;
 	@Autowired LFPRepository LFPRepo;
 	@Autowired DMRepository DMRepo;
@@ -42,4 +43,8 @@ public class UserController {
 		User user = userRepo.findByUsername(username);
 		return new ResponseEntity<List<DM>>(DMRepo.findByReceiver(user), HttpStatus.OK);
 	}
+	
+
+	
+
 }

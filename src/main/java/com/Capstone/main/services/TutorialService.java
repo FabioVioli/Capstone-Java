@@ -15,7 +15,7 @@ public class TutorialService {
 	@Autowired TutorialRepository repo;
 	
 	public Tutorial saveTutorial(User user, String titolo, List<String> skills, String annuncio) {
-		Tutorial tutorial = new Tutorial(titolo, annuncio, LocalDateTime.now(), LocalDateTime.now(), 0, skills, user);
+		Tutorial tutorial = new Tutorial(titolo, annuncio, LocalDateTime.now(), LocalDateTime.now(), skills, user);
 		return repo.save(tutorial);
 	}
 	

@@ -21,7 +21,7 @@ public class Coaching extends Post{
 	private User user;
 
 	public Coaching(String title, String body, LocalDateTime creationDate, LocalDateTime lastModifyDate, int likes, List<String> skills , User user) {
-		super(title, body, creationDate, lastModifyDate, likes, skills);
+		super(title, body, creationDate, lastModifyDate, skills);
 		
 		this.user = user;
 		

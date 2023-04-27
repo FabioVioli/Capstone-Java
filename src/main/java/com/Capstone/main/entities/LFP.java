@@ -23,7 +23,7 @@ public class LFP extends Post {
 	private boolean status = true;
 
 	public LFP(String title, String body, LocalDateTime creationDate, LocalDateTime lastModifyDate, int likes, List<String> skills , User user ) {
-		super(title, body, creationDate, lastModifyDate, likes, skills);
+		super(title, body, creationDate, lastModifyDate, skills);
 		
 		this.user = user;
 		
